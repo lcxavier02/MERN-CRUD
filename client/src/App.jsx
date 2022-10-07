@@ -1,13 +1,17 @@
 import { Route, Routes }  from 'react-router-dom';
-import TaskPage           from './components/TaskPage';
-import TaskForm           from './components/TaskForm';
+import TaskPage           from './pages/TaskPage';
+import TaskForm           from './pages/TaskForm';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<TaskPage />} />
-      <Route path="/new" element={<TaskForm />} />
-    </Routes>
+    <>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<TaskPage />} />
+        <Route path="/new" element={<TaskForm />} />
+      </Routes>
+    </>
   );
 }
 
